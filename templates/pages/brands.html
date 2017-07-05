@@ -7,7 +7,8 @@ brands:
 {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
 
 <main class="page">
-    <h1 class="page-heading">{{lang 'brand.label'}}</h1>
+<div class="container">
+        <h1 class="page-heading">{{lang 'brand.label'}}</h1>
     <ul class="brandGrid">
         {{#each brands}}
             <li class="brand">
@@ -27,6 +28,7 @@ brands:
         {{/each}}
     </ul>
     {{> components/common/paginator pagination.brands}}
+</div>
 </main>
 {{/partial}}
 {{> layout/base}}

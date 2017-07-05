@@ -16,6 +16,8 @@ import carousel from './common/carousel';
 import 'lazysizes';
 import loadingProgressBar from './global/loading-progress-bar';
 import FastClick from 'fastclick';
+import './global/ey-script';
+
 
 function fastClick(element) {
     return new FastClick(element);

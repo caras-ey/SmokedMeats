@@ -8,10 +8,15 @@ product:
         limit: {{theme_settings.productpage_related_products_count}}
     similar_by_views:
         limit: {{theme_settings.productpage_similar_by_views_count}}
+customer:
+    recently_viewed_products: true
 ---
 {{#partial "page"}}
-    {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
-
+    <div class="product-breadcrumbs">
+        <div class="container">
+            {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+        </div>
+    </div>
     {{#each product.shipping_messages}}
         {{> components/common/alert-info message}}
     {{/each}}
@@ -19,16 +24,25 @@ product:
     <div itemscope itemtype="http://schema.org/Product">
         {{> components/products/product-view schema=true}}
 
-        {{#if product.videos.list.length}}
-            {{> components/products/videos product.videos}}
-        {{/if}}
+        {{>components/products/accordion}}
 
-        {{#if settings.show_product_reviews}}
-            {{> components/products/reviews reviews=product.reviews product=product urls=urls}}
-        {{/if}}
+       <div class="container ymal">  
+            <h4>{{lang 'products.related_products'}}:</h4>
 
-        {{> components/products/tabs}}
-
+            {{> components/products/grid-product products=product.related_products columns=3}}
+       </div>
+       {{#if customer}}
+       <div class="recentItems">  
+            <div class="container"> 
+            <h4>Recently Viewed:</h4>
+            <form action="{{urls.compare}}" method="post">
+            {{> components/products/grid-product products=customer.recently_viewed_products.items }}
+            </form>
+            </div>
+       </div>
+       {{else}}
+       {{/if}}
+    
     </div>
 
 {{/partial}}

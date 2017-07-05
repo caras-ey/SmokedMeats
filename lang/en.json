@@ -4,10 +4,11 @@
     },
     "footer": {
         "brands": "Popular Brands",
-        "navigate": "Navigate",
+        "company": "Company",
         "info": "Info",
-        "categories": "Categories",
-        "call_us": "Call us at {phone_number}"
+        "categories": "Shopping",
+        "call_us": "Call us at {phone_number}",
+        "customer": "Customer"
     },
     "home": {
         "heading": "Home"
@@ -33,19 +34,19 @@
         "title": "Checkout"
     },
     "cart": {
-        "continue_shopping": "Click here to continue shopping",
+        "continue_shopping": "Keep Shopping",
         "items": "{NUM, plural, =0{(0 items)} one {(# item)} other {(# items)}}",
         "checkout": {
             "address": {
                 "multiple": "check out with multiple addresses",
                 "or": "or"
             },
-            "button": "Check out",
+            "button": "Proceed to Checkout",
             "empty_cart": "Your cart is empty",
             "title": "Click here to proceed to checkout",
             "item": "Item",
             "price": "Price",
-            "quantity": "Quantity",
+            "quantity": "Qty",
             "total": "Total",
             "change": "Change",
             "subtotal": "Subtotal",
@@ -62,6 +63,7 @@
             "view_cart": "View Cart"
         },
         "label": "Your Cart ({quantity, plural, one {# item} other {# items}})",
+        "label-alt": "Your Cart",
         "is_empty": "Your cart is empty",
         "coupon_code": "Coupon Code",
         "discount": "Discount",
@@ -90,7 +92,7 @@
             "remove": "Remove"
         },
         "shipping_estimator": {
-            "add_info": "Add Info",
+            "add_info": "Estimate Shipping",
             "select_a_country": "Country",
             "select_a_state": "State/province",
             "estimate_shipping": "Estimate Shipping",
@@ -570,13 +572,17 @@
         "purchase_units": "{quantity, plural, =0{0 units} one {# unit} other {# units}}",
         "max_purchase_quantity": "Maximum Purchase:",
         "min_purchase_quantity": "Minimum Purchase:",
-        "related_products": "Related Products",
+        "related_products": "You May Also Like",
         "top": "Most Popular Products",
         "similar_by_views": "Customers Also Viewed",
         "featured": "Featured Products",
         "file_option_set": "Currently: <a href=\"{url}\" target=\"_blank\">{name}</a>",
         "new": "New Products",
-        "warranty": "Warranty Information",
+        "warranty": {
+            "title" : "Cooking Instructions",
+            "show" : "Show Description",
+            "hide" : "Hide Description"
+        },
         "reviews": {
             "hide": "Hide Reviews",
             "new": "Write a Review",
@@ -612,7 +618,7 @@
         "adding_to_cart": "Adding to cart…",
         "options": "Options",
         "none": "None",
-        "sku": "SKU:",
+        "sku": "SKU#",
         "upc": "UPC:",
         "condition": "Condition:",
         "availability": "Availability:",
@@ -629,7 +635,11 @@
         "filetypes": "file types are",
         "choose_an_option": "Please choose an option",
         "select_one": "Please select one",
-        "description": "Description",
+        "description": {
+            "title" : "Description",
+            "show" : "Show Description",
+            "hide" : "Hide Description"
+        },
         "retail_price": "MSRP",
         "price_with_tax": "(Inc. {tax_label})",
         "price_without_tax": "(Ex. {tax_label})",
@@ -670,9 +680,9 @@
         "comments": "Comments"
     },
     "newsletter": {
-        "subscribe": "Subscribe to our newsletter",
-        "subscribe_intro": "Get the latest updates on new products and upcoming sales",
-        "subscribe_submit": "Subscribe",
+        "subscribe": "Join Our FREE Newsletter",
+        "subscribe_intro": "Receive online coupons, deals, and more!",
+        "subscribe_submit": "Sign Up",
         "email_placeholder": "Your email address",
         "subscribed_heading": "Thanks for Subscribing!",
         "subscribed_heading_error": "Oops...",
@@ -681,7 +691,7 @@
         "unsubscribed_message": "You will no longer receive marketing emails from <b>{store_name}</b>"
     },
     "social": {
-        "connect": "Connect With Us"
+        "connect": "Connect"
     },
     "errors": {
         "shipping_quote_failure": "There was a problem retrieving your shipping quote",
@@ -702,7 +712,7 @@
         },
         "faceted": {
             "selected": {
-                "title": "Refine by",
+                "title": "Filter By",
                 "rating-label": "Rated {rating, plural, one {# Star} other {# Stars}} Or More",
                 "no-filters": "No filters applied",
                 "clear-all": "Clear all"
@@ -719,8 +729,8 @@
             "more": "More",
             "show-more": "Show More",
             "show-less": "Show Less",
-            "show-filters": "Show Filters",
-            "hide-filters": "Hide Filters",
+            "show-filters": "Filter By",
+            "hide-filters": "Filter By",
             "browse-by": "Browse by"
         },
         "error": {

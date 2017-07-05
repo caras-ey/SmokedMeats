@@ -63,13 +63,6 @@
                 </div>
             </li>
         {{/each}}
-    {{else}}
-        <li class="cart-total">
-            <div class="cart-total-label">
-                <strong>{{lang 'cart.coupon_code'}}:</strong>
-            </div>
-            {{> components/cart/coupon-input}}
-        </li>
     {{/if}}
     {{#if settings.gift_certificates_enabled}}
         {{#each cart.gift_certificates}}
@@ -85,12 +78,6 @@
                 </div>
             </li>
         {{/each}}
-        <li class="cart-total">
-            <div class="cart-total-label">
-                <strong>{{lang 'cart.gift_certificates.gift_certificate'}}:</strong>
-            </div>
-            {{> components/cart/gift-certificate-input}}
-        </li>
     {{/if}}
     <li class="cart-total">
         <div class="cart-total-label">

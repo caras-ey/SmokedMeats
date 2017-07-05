@@ -1,41 +1,57 @@
 ---
 category:
-    shop_by_price: true
-    products:
-        limit: {{theme_settings.categorypage_products_per_page}}
+shop_by_price: true
+products:
+limit: {{theme_settings.categorypage_products_per_page}}
 ---
 {{inject "categoryProductsPerPage" theme_settings.categorypage_products_per_page}}
 {{#partial "head"}}
-    {{#if pagination.category.previous}}
-        <link rel="prev" href="{{pagination.category.previous}}">
-    {{/if}}
-    {{#if pagination.category.next}}
-        <link rel="next" href="{{pagination.category.next}}">
-    {{/if}}
-{{/partial}}
-
-{{#partial "page"}}
-
-{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
-{{#if category.image}}
-    <img src="{{getImage category.image 'zoom_size'}}">
+{{#if pagination.category.previous}}
+<link rel="prev" href="{{pagination.category.previous}}">
 {{/if}}
-<h1 class="page-heading">{{category.name}}</h1>
-{{{category.description}}}
-{{{snippet 'categories'}}}
-<div class="page">
-    <aside class="page-sidebar" id="faceted-search-container">
-        {{> components/category/sidebar}}
-    </aside>
-
-    <main class="page-content" id="product-listing-container">
-        {{#if category.products}}
-            {{> components/category/product-listing}}
-        {{else}}
-            <p>{{lang 'categories.no_products'}}</p>
-        {{/if}}
-    </main>
+{{#if pagination.category.next}}
+<link rel="next" href="{{pagination.category.next}}">
+{{/if}}
+{{/partial}}
+{{#partial "page"}}
+<div class="container">
+    {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+    <!--{{#if category.image}}
+    <img src="{{getImage category.image 'zoom_size'}}">
+    {{/if}}-->
+    {{#if category.subcategories}}
+    <h1 class="page-heading section-title">-{{category.name}}-</h1>
+    {{else}}
+    <h1 class="page-heading section-title section-title-alt">{{category.name}}</h1>
+    {{/if}}
+    
+    {{{snippet 'categories'}}}
 </div>
+<div class="page">
+    <div class="container">
+        {{#if category.products}}
+        <aside class="page-sidebar" id="faceted-search-container">
+            {{> components/category/sidebar}}
+        </aside>
+        {{/if}}
+        </main>
+        <main class="page-content" id="product-listing-container">
+        
+        {{#if category.subcategories}}
+        {{> components/category/subcategory-listing}}
+        {{else}}
+        {{/if}}
+        {{#if category.products}}
+        {{> components/category/product-listing}}
+        {{else}}
+        <!--<p>{{lang 'categories.no_products'}}</p>-->
+        {{/if}}
 
+        <div class="category-description">
+            {{{category.description}}}
+        </div>
+        </main>
+    </div>
+</div>
 {{/partial}}
 {{> layout/base}}

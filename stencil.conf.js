@@ -10,11 +10,12 @@ var watchOptions = {
     files: [
         '/templates',
         '/lang',
+        '/assets/scss'
     ],
 
     //Do not watch files in these directories
     ignored: [
-        '/assets/scss',
+        //'/assets/scss',
         '/assets/less',
         '/assets/css',
         '/assets/dist',

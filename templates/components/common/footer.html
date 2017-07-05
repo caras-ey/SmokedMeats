@@ -6,8 +6,44 @@
 </div>
 {{/if}}
 <footer class="footer" role="contentinfo">
-    <div class="container">
-        {{#if theme_settings.social_icon_placement_bottom '!==' 'bottom_none'}}
+    <div class="footer-top">
+        <div class="container">
+        <section class="footer-info">
+            <div class="footer-links">
+                            <article class="footer-info-col footer-info-col--small links" data-section-type="footer-webPages">
+                <h5 class="footer-info-heading links">{{lang 'footer.company'}}</h5>
+                <ul class="footer-info-list">
+                    <li><a href="">About</a></li>
+                    <li><a href="">Our Locations</a></li>
+                    <li><a href="">Contact Us</a></li>
+
+                </ul>
+            </article>
+
+            <article class="footer-info-col footer-info-col--small links" data-section-type="footer-categories">
+                <h5 class="footer-info-heading links">{{lang 'footer.categories'}}</h5>
+                <ul class="footer-info-list">
+                    {{#each categories}}
+                        <li>
+                            <a href="{{url}}">{{name}}</a>
+                        </li>
+                    {{/each}}
+                    <li><a href="">Gift Certificates</a></li>
+                </ul>
+            </article>
+
+            <article class="footer-info-col footer-info-col--small links" data-section-type="footer-brands">
+                <h5 class="footer-info-heading links">{{lang 'footer.customer'}}</h5>
+                <ul class="footer-info-list">
+                    <li><a href="">My Account</a></li>
+                    <li><a href="">Shopping Cart</a></li>
+                    <li><a href="">Shipping &amp; Returns</a></li>
+                    <li><a href="">Privacy</a></li>
+
+                </ul>
+            </article>
+            </div>
+                    {{#if theme_settings.social_icon_placement_bottom '!==' 'bottom'}}
             <article class="footer-info-col
                 footer-info-col--social
                 footer-info-col--{{#if theme_settings.social_icon_placement_bottom '===' 'bottom_left'}}left{{else}}right{{/if}}"
@@ -15,63 +51,20 @@
                     <h5 class="footer-info-heading">{{lang 'social.connect'}}</h5>
                     {{> components/common/social-links}}
             </article>
+
         {{/if}}
-        <section class="footer-info">
-            <article class="footer-info-col footer-info-col--small" data-section-type="footer-webPages">
-                <h5 class="footer-info-heading">{{lang 'footer.navigate'}}</h5>
-                <ul class="footer-info-list">
-                    {{#each pages}}
-                        <li>
-                            <a href="{{url}}">{{name}}</a>
-                        </li>
-                    {{/each}}
-                    <li>
-                        <a href="{{urls.sitemap}}">{{lang 'sitemap.page_title'}}</a>
-                    </li>
-                </ul>
-            </article>
-
-            <article class="footer-info-col footer-info-col--small" data-section-type="footer-categories">
-                <h5 class="footer-info-heading">{{lang 'footer.categories'}}</h5>
-                <ul class="footer-info-list">
-                    {{#each categories}}
-                        <li>
-                            <a href="{{url}}">{{name}}</a>
-                        </li>
-                    {{/each}}
-                </ul>
-            </article>
-
-            {{#if theme_settings.shop_by_brand_show_footer}}
-            <article class="footer-info-col footer-info-col--small" data-section-type="footer-brands">
-                <h5 class="footer-info-heading">{{lang 'footer.brands'}}</h5>
-                <ul class="footer-info-list">
-                    {{#each shop_by_brand}}
-                        <li>
-                            <a href="{{url}}">{{name}}</a>
-                        </li>
-                    {{/each}}
-                    <li><a href="{{urls.brands}}">{{lang 'common.view_all'}}</a></li>
-                </ul>
-            </article>
-            {{/if}}
-
-            <article class="footer-info-col footer-info-col--small" data-section-type="storeInfo">
-                <h5 class="footer-info-heading">{{lang 'footer.info'}}</h5>
-                <address>{{nl2br settings.address}}</address>
-                {{#if settings.phone_number}}
-                    <strong>{{lang 'footer.call_us' phone_number=settings.phone_number}}</strong>
-                {{/if}}
-            </article>
-
-            <article class="footer-info-col" data-section-type="newsletterSubscription">
+                    <article class="footer-info-col newsletter-container" data-section-type="newsletterSubscription">
                 {{#if settings.show_newsletter_box}}
                     {{> components/common/subscription-form}}
                 {{/if}}
                 {{> components/common/payment-icons}}
             </article>
         </section>
-        {{#if theme_settings.geotrust_ssl_common_name}}
+    </div>        
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+                    {{#if theme_settings.geotrust_ssl_common_name}}
             <div class="footer-geotrust-ssl-seal">
                 {{> components/common/geotrust-ssl-seal}}
             </div>
@@ -83,8 +76,13 @@
         {{/if}}
         {{#if theme_settings.show_copyright_footer}}
             <div class="footer-copyright">
-                <p class="powered-by">&copy; {{moment format="YYYY"}} {{settings.store_name}} </p>
+                <p class="secure-shop">
+                    <img src="{{cdn '../img/ey-images/secure-shopping.png'}}" alt="">
+                </p>
+                <p class="powered-by">Copyright &copy; {{moment format="YYYY"}} {{settings.store_name}}. All Rights Reserved. Site design by <a href="https://www.eystudios.com">EYStudios</a> </p>
             </div>
         {{/if}}
+        </div>
     </div>
+
 </footer>

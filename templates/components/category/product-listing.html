@@ -1,5 +1,8 @@
-{{> components/products/filter sort=pagination.category.sort}}
-
+<div class="category-actionBar">
+	{{> components/products/filter sort=pagination.category.sort}}
+{{> components/common/paginator pagination.category}}
+<div class="clear"></div>
+</div>
 <form action="{{urls.compare}}" method='POST' data-product-compare>
     {{#if theme_settings.product_list_display_mode '===' 'grid'}}
         {{> components/products/grid products=category.products show_compare=category.show_compare theme_settings=theme_settings}}
@@ -8,4 +11,7 @@
     {{/if}}
 </form>
 
-{{> components/common/paginator pagination.category}}
+<div class="category-actionBar top">
+	{{> components/common/paginator pagination.category}}
+	<div class="clear"></div>
+</div>
