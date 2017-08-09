@@ -25,12 +25,15 @@ customer:
         {{> components/products/product-view schema=true}}
 
         {{>components/products/accordion}}
+        {{#if product.related_products}}
+               <div class="container ymal">  
 
-       <div class="container ymal">  
             <h4>{{lang 'products.related_products'}}:</h4>
 
             {{> components/products/grid-product products=product.related_products columns=3}}
        </div>
+       {{/if}}
+
        {{#if customer}}
        <div class="recentItems">  
             <div class="container"> 

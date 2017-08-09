@@ -171,12 +171,12 @@
                         {{#if product.event_date}}
                         {{> components/products/event-date}}
                         {{/if}}
-                        <div class="form-field form-field--stock{{#unless product.stock_level}} u-hiddenVisually{{/unless}}">
+                        <!--<div class="form-field form-field--stock{{#unless product.stock_level}} u-hiddenVisually{{/unless}}">
                             <label class="form-label form-label--alternate">
                                 {{lang 'products.current_stock'}}
                                 <span data-product-stock>{{product.stock_level}}</span>
                             </label>
-                        </div>
+                        </div>-->
                         {{#if product.can_purchase}}
                         {{> components/products/add-to-cart}}
                         {{/if}}

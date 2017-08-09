@@ -14,9 +14,13 @@ product_results:
 {{/partial}}
 
 {{#partial "page"}}
-{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+<div class="container">
+    {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+</div>
 {{{snippet 'search'}}}
-<section class="nav">
+<main>
+    <div class="container">
+        <section class="nav">
     {{#if forms.search.query}}
         <div id="search-results-heading">
             {{>components/search/heading}}
@@ -83,7 +87,6 @@ product_results:
                             </div>
                         {{/if}}
                     {{/if}}
-
                     {{#if category_results.length}}
                         <div class="search-suggestion">
                             <h5 class="suggestion-title">{{lang 'forms.search.categories'}}</h5>
@@ -147,5 +150,7 @@ product_results:
     </main>
 </section>
 
+    </div>
+</main>
 {{/partial}}
 {{> layout/base}}

@@ -20,13 +20,13 @@
     </nav>
     {{/if}}
 
-    <div class="page-content page-content--centered">
+
         {{#replace '%%Syndicate%%' page.content}}
             {{> components/page/rss_feed}}
         {{else}}
             <p>{{{page.content}}}</p>
         {{/replace}}
-    </div>
+
 
     {{#if page.feed}}
         <ul>

@@ -43,7 +43,7 @@
                 {{lang 'cart.added_to_cart.your_cart_contains' num_products=cart.quantity}}
             </p>
 
-            <a href="#" class="button button--primary" role="button" data-reveal-close>
+            <a href="#" class="button button--primary continue" role="button" data-reveal-close>
                 {{lang 'cart.added_to_cart.continue_shopping'}}
             </a>
 
@@ -53,12 +53,7 @@
         </section>
         <section class="productView">
             {{#with cart.added_item}}
-                <figure class="productView-image">
-                    <img class="productView-image--cart"
-                         src="{{getImage image 'product_size' (cdn ../theme_settings.default_image_product)}}"
-                         alt="{{image.alt}}"
-                         title="{{image.alt}}" />
-                </figure>
+            
 
                 <div class="productView-details">
                     <h4 class="productView-title">
@@ -101,6 +96,12 @@
                         </dl>
                     {{/each}}
                 </div>
+                  <figure class="productView-image">
+                    <img class="productView-image--cart"
+                         src="{{getImage image 'product_size' (cdn ../theme_settings.default_image_product)}}"
+                         alt="{{image.alt}}"
+                         title="{{image.alt}}" />
+                </figure>
             {{/with}}
         </section>
     </div>

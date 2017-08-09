@@ -13,9 +13,9 @@
                             <article class="footer-info-col footer-info-col--small links" data-section-type="footer-webPages">
                 <h5 class="footer-info-heading links">{{lang 'footer.company'}}</h5>
                 <ul class="footer-info-list">
-                    <li><a href="">About</a></li>
-                    <li><a href="">Our Locations</a></li>
-                    <li><a href="">Contact Us</a></li>
+                    <li><a href="/aboutus.html">About</a></li>
+                    <li><a href="/locations.html">Our Locations</a></li>
+                    <li><a href="/contactus.html">Contact Us</a></li>
 
                 </ul>
             </article>
@@ -28,17 +28,17 @@
                             <a href="{{url}}">{{name}}</a>
                         </li>
                     {{/each}}
-                    <li><a href="">Gift Certificates</a></li>
+                    <li><a href="giftcertificates.php">Gift Certificates</a></li>
                 </ul>
             </article>
 
             <article class="footer-info-col footer-info-col--small links" data-section-type="footer-brands">
                 <h5 class="footer-info-heading links">{{lang 'footer.customer'}}</h5>
                 <ul class="footer-info-list">
-                    <li><a href="">My Account</a></li>
-                    <li><a href="">Shopping Cart</a></li>
-                    <li><a href="">Shipping &amp; Returns</a></li>
-                    <li><a href="">Privacy</a></li>
+                    <li><a href="/account.php">My Account</a></li>
+                    <li><a href="/cart.php">Shopping Cart</a></li>
+                    <li><a href="shipping-returns">Shipping &amp; Returns</a></li>
+                    <li><a href="privacy">Privacy</a></li>
 
                 </ul>
             </article>
@@ -79,7 +79,7 @@
                 <p class="secure-shop">
                     <img src="{{cdn '../img/ey-images/secure-shopping.png'}}" alt="">
                 </p>
-                <p class="powered-by">Copyright &copy; {{moment format="YYYY"}} {{settings.store_name}}. All Rights Reserved. Site design by <a href="https://www.eystudios.com">EYStudios</a> </p>
+                <p class="powered-by">Copyright &copy; {{moment format="YYYY"}} {{settings.store_name}}. All Rights Reserved. Site design by <a href="http://www.eystudios.com/" target="_blank">EYStudios</a> </p>
             </div>
         {{/if}}
         </div>

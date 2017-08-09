@@ -137,6 +137,7 @@
         "no_preference": "No Preference",
         "other_details": "Other Details",
         "required": "Required",
+        "required_star" : "*",
         "email_address": "Email Address",
         "edit": "Edit",
         "not_applicable": "N/A",
@@ -464,14 +465,14 @@
     "forms": {
         "range": "You need to enter numbers only between: {limitTo} and {limitFrom}",
         "contact_us": {
-            "full_name": "Full Name",
+            "full_name": "Name",
             "email": "Email Address",
             "company": "Company Name",
             "phone": "Phone Number",
             "order": "Order Number",
             "rma": "RMA Number",
             "question": "Comments/Questions",
-            "submit": "Submit Form",
+            "submit": "Submit",
             "successful": "We've received your feedback and will respond shortly if required. <a href=\"{shopPath}\">Continue</a>."
         },
         "create_account": {
@@ -579,7 +580,7 @@
         "file_option_set": "Currently: <a href=\"{url}\" target=\"_blank\">{name}</a>",
         "new": "New Products",
         "warranty": {
-            "title" : "Cooking Instructions",
+            "title" : "Special Instructions",
             "show" : "Show Description",
             "hide" : "Hide Description"
         },

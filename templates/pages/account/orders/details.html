@@ -1,11 +1,14 @@
 {{#partial "page"}}
-
+<div class="container">
+    
 {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
 <h2 class="page-heading title">{{lang 'account.orders.details.heading' number=order.id}}</h2>
 {{> components/account/navigation account_page='orders'}}
+</div>
 
 <div class="account">
-    <div class="account-body">
+<div class="container">
+        <div class="account-body">
         {{#each order.status_messages}}
             {{> components/common/alert-info message}}
         {{/each}}
@@ -144,6 +147,7 @@
         </aside>
 
     </div>
+</div>
 </div>
 {{/partial}}
 {{> layout/base}}

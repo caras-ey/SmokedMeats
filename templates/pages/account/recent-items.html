@@ -1,6 +1,7 @@
 {{#partial "page"}}
 <div class="account">
-    {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+<div class="container">
+	    {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
     <h2 class="page-heading">{{lang 'account.recent_items.heading' }}</h2>
     {{> components/account/navigation account_page='recent_items'}}
 
@@ -11,6 +12,7 @@
     <form action="{{urls.compare}}" method="post">
         {{> components/products/grid products=customer.recently_viewed_products.items show_compare=customer.recently_viewed_products.show_compare}}
     </form>
+</div>
 </div>
 {{/partial}}
 {{> layout/base}}
